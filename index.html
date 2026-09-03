@@ -17,13 +17,12 @@
     }
 
     body {
-      /* Cập nhật link ảnh trực tiếp từ Google Drive & hỗ trợ phủ kín màn hình */
-      background-image: url('https://lh3.googleusercontent.com/d/17TAZU4hh9D0nbUxSlAKd5A06U_qHlWdj');
+      background-image: url('https://lh3.googleusercontent.com/d/1kGAHJ-7F55q1WG17gv3KEF0dBiJV4sB1');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
-      background-color: #003366; /* Màu nền dự phòng khi ảnh đang tải */
+      background-color: #003366;
       min-height: 100vh;
       padding: 20px 10px;
       display: flex;
@@ -34,12 +33,13 @@
     .container {
       max-width: 550px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(10px);
+      /* Giảm độ sáng/độ đục từ 0.88 xuống 0.65 */
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
       border-radius: 20px;
       padding: 25px 20px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.5);
       text-align: center;
     }
 
@@ -48,7 +48,7 @@
       flex-direction: column;
       align-items: center;
       margin-bottom: 20px;
-      border-bottom: 2px solid rgba(0, 51, 102, 0.15);
+      border-bottom: 2px solid rgba(0, 51, 102, 0.2);
       padding-bottom: 15px;
     }
 
@@ -71,26 +71,28 @@
     }
 
     h1 {
-      color: #003366;
+      color: #002244;
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
     .card {
-      background: #ffffff;
+      /* Giảm độ đục nền của từng thẻ card bên trong xuống 0.85 */
+      background: rgba(255, 255, 255, 0.85);
       padding: 18px;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       margin-bottom: 18px;
-      border: 1px solid #e1e8ed;
+      border: 1px solid rgba(225, 232, 237, 0.8);
     }
 
     .card h2 {
-      color: #0055a5;
+      color: #004488;
       margin-bottom: 12px;
       font-size: 15px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border-bottom: 1.5px solid #edf2f7;
@@ -105,7 +107,7 @@
     }
 
     .sensor-item {
-      background: #f8fafc;
+      background: rgba(248, 250, 252, 0.9);
       padding: 12px;
       border-radius: 10px;
       border-left: 4px solid #0055a5;
@@ -115,8 +117,8 @@
     .sensor-item label {
       display: block;
       font-size: 12px;
-      color: #64748b;
-      font-weight: 600;
+      color: #475569;
+      font-weight: 700;
       margin-bottom: 4px;
     }
 
@@ -128,7 +130,8 @@
 
     .updated-at {
       font-size: 11px;
-      color: #94a3b8;
+      color: #475569;
+      font-weight: 600;
       margin-top: 10px;
       text-align: right;
     }
@@ -172,8 +175,8 @@
       margin-top: 15px;
       font-weight: 700;
       font-size: 15px;
-      color: #334155;
-      background: #f1f5f9;
+      color: #1e293b;
+      background: rgba(241, 245, 249, 0.9);
       padding: 10px;
       border-radius: 8px;
     }
