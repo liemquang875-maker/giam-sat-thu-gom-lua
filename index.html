@@ -17,8 +17,13 @@
     }
 
     body {
-      background: url('https://drive.google.com/file/d/17TAZU4hh9D0nbUxSlAKd5A06U_qHlWdj/view?usp=drive_link') no-repeat center center fixed;
-      background-size: 100% 100%;
+      /* Cập nhật link ảnh trực tiếp từ Google Drive & hỗ trợ phủ kín màn hình */
+      background-image: url('https://lh3.googleusercontent.com/d/17TAZU4hh9D0nbUxSlAKd5A06U_qHlWdj');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-color: #003366; /* Màu nền dự phòng khi ảnh đang tải */
       min-height: 100vh;
       padding: 20px 10px;
       display: flex;
@@ -210,7 +215,6 @@
 
   <script>
     // ============ PHẦN 1: DỮ LIỆU THỜI TIẾT TỪ GOOGLE SHEET ============
-    // URL Web App Apps Script (đã deploy, chế độ "Anyone")
     const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbz-pb7IQSkd0pcZD4xu1rVqw2MoVwXs3f7otdg4-Q2-ldaBbmpfKdWngS2QJizbCixi/exec?action=data";
 
     function statusLabelVN(s) {
@@ -238,9 +242,9 @@
     }
 
     fetchWeather();
-    setInterval(fetchWeather, 5000); // tự làm mới mỗi 5 giây
+    setInterval(fetchWeather, 5000);
 
-    // ============ PHẦN 2: ĐIỀU KHIỂN ĐỘNG CƠ VẪN DÙNG FIREBASE ============
+    // ============ PHẦN 2: ĐIỀU KHIỂN ĐỘNG CƠ DÙNG FIREBASE ============
     const firebaseConfig = {
       apiKey: "AIzaSyDTikQmqH7OF_TTBEwaHY5fFTzDgdhFo94",
       authDomain: "giam-sat-thu-gom-lua.firebaseapp.com",
